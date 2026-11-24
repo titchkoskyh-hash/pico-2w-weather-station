@@ -1,0 +1,13 @@
+from machine import Pin
+import utime
+
+# Initialize the onboard LED
+led = Pin("LED", Pin.OUT)
+
+# Flash the LED in an infinite loop
+while True:
+    led.value(1)  # Turn ON
+    utime.sleep(1)
+    led.value(0)  # Turn OFF
+    utime.sleep(1)
+
